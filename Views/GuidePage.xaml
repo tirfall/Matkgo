@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Matkgo.Views.GuidePage"
+             Title="GuidePage">
+    <VerticalStackLayout BackgroundColor="AntiqueWhite">
+        <StackLayout x:Name="guideStack" >
+            <Label Text="Title"/>
+            <Entry Text="{Binding Title}" FontSize="Medium"/>
+            <Label Text="Description"/>
+            <Entry Text="{Binding Description}" FontSize="Medium"/>
+            <Label Text="Equipment"/>
+            <Entry Text="{Binding Equipment}" FontSize="Medium"/>
+        </StackLayout>
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+            <Button 
+                Text="Add"
+                Command="{Binding GuidesListViewModel.SaveGuideCommand}"
+                CommandParameter="{Binding}"
+                BackgroundColor="Green"/>
+            <Button 
+                Text="Delete"
+                Command="{Binding GuidesListViewModel.DeleteGuideCommand}"
+                CommandParameter="{Binding}"
+                BackgroundColor="Green"/>
+            <Button 
+                Text="Back"
+                Command="{Binding GuidesListViewModel.BackCommand}"
+                BackgroundColor="Green"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

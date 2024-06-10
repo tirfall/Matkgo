@@ -1,4 +1,4 @@
-п»їusing Matkgo.ViewModels;
+using Matkgo.ViewModels;
 
 namespace Matkgo.Views
 {
@@ -6,13 +6,14 @@ namespace Matkgo.Views
     {
         public WeatherPage()
         {
+            InitializeComponent();
         }
 
         private async void OnGetWeatherClicked(object sender, EventArgs e)
         {
             var viewModel = (WeatherViewModel)BindingContext;
-            var locationEntry = (Entry)FindByName("LocationEntry"); // РџРѕР»СѓС‡Р°РµРј РґРѕСЃС‚СѓРї Рє СЌР»РµРјРµРЅС‚Сѓ Entry РїРѕ РµРіРѕ РёРјРµРЅРё
-            await viewModel.LoadWeatherAsync(locationEntry.Text); // РСЃРїРѕР»СЊР·СѓРµРј С‚РµРєСЃС‚ РёР· Entry РґР»СЏ Р·Р°РіСЂСѓР·РєРё РїРѕРіРѕРґС‹
+            var locationEntry = (Entry)FindByName("LocationEntry"); // Получаем доступ к элементу Entry по его имени
+            await viewModel.LoadWeatherAsync(locationEntry.Text); // Используем текст из Entry для загрузки погоды
         }
     }
 }

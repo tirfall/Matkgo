@@ -13,6 +13,10 @@ namespace Matkgo
         {
             await Navigation.PushAsync(new WeatherPage());
         }
+        private async void OnGuideClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new GuidesPage());
+        }
     }
 
 }

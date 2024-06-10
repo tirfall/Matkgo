@@ -4,6 +4,7 @@
              x:Class="Matkgo.MainPage">
     <StackLayout>
         <Button Text="Weather" Clicked="OnWeatherClicked" />
+        <Button Text="Guides" Clicked="OnGuideClicked" />
         <!-- Добавьте другие кнопки для навигации к другим страницам -->
     </StackLayout>
 </ContentPage>

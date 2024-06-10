@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Matkgo.Views.DBListPage"
+             Title="DBListPage">
+    <StackLayout BackgroundColor="AntiqueWhite">
+        <ListView x:Name="guidesList" ItemsSource="{Binding}" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout >
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Title}" FontSize="Medium" VerticalOptions="CenterAndExpand"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Add" Clicked="CreateGuide" TextColor="White" BackgroundColor="Green"/>
+    </StackLayout>
+</ContentPage>
