@@ -70,9 +70,6 @@
 	  <Compile Update="Views\DBGuidePage.xaml.cs">
 	    <DependentUpon>DBGuidePage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\GuidePage.xaml.cs">
-	    <DependentUpon>GuidePage.xaml</DependentUpon>
-	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>

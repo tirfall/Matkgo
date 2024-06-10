@@ -4,27 +4,28 @@
              x:Class="Matkgo.Views.GuidePage"
              Title="GuidePage">
     <VerticalStackLayout BackgroundColor="AntiqueWhite">
-        <StackLayout x:Name="guideStack" >
-            <Label Text="Title"/>
+        <StackLayout x:Name="friendStack" >
+            <Label Text="Title1"/>
             <Entry Text="{Binding Title}" FontSize="Medium"/>
             <Label Text="Description"/>
             <Entry Text="{Binding Description}" FontSize="Medium"/>
             <Label Text="Equipment"/>
             <Entry Text="{Binding Equipment}" FontSize="Medium"/>
+            <Label Text="SafetyTips"/>
+            <Entry Text="{Binding SafetyTips}" FontSize="Medium"/>
         </StackLayout>
         <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
             <Button 
-                Text="Add"
-                Command="{Binding GuidesListViewModel.SaveGuideCommand}"
-                CommandParameter="{Binding}"
+                Text="Lisa"
+                Command="{Binding GuidesListViewModel.SaveGuideCommand}"                CommandParameter="{Binding}"
                 BackgroundColor="Green"/>
             <Button 
-                Text="Delete"
+                Text="Kustuta"
                 Command="{Binding GuidesListViewModel.DeleteGuideCommand}"
                 CommandParameter="{Binding}"
                 BackgroundColor="Green"/>
             <Button 
-                Text="Back"
+                Text="Tagasi"
                 Command="{Binding GuidesListViewModel.BackCommand}"
                 BackgroundColor="Green"/>
         </HorizontalStackLayout>
