@@ -1,0 +1,19 @@
+﻿<!-- Views/WeatherPage.xaml -->
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Matkgo.Views"
+             xmlns:vm="clr-namespace:Matkgo.ViewModels"
+             x:Class="Matkgo.Views.WeatherPage">
+    <ContentPage.BindingContext>
+        <vm:WeatherViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Padding="10">
+        <Label Text="Weather Forecast" FontSize="24" />
+        <Entry Placeholder="Enter location" x:Name="LocationEntry" />
+        <Button Text="Get Weather" Clicked="OnGetWeatherClicked" />
+        <Label Text="{Binding WeatherForecast.Temperature}" FontSize="18" />
+        <Label Text="{Binding WeatherForecast.Condition}" FontSize="18" />
+        <Label Text="{Binding WeatherForecast.ForecastDate}" FontSize="18" />
+    </StackLayout>
+</ContentPage>
